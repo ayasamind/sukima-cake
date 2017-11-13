@@ -40,6 +40,14 @@ class ProfilesTable extends Table
             'foreignKey' => 'user_id',
             'joinType' => 'INNER'
         ]);
+        $this->addBehavior('Josegonzalez/Upload.Upload', [
+            'photo' => [
+                'fields' => [
+                    'dir' => 'photo_dir',
+                ],
+                'path' => 'webroot{DS}img{DS}{model}{DS}{field}{DS}'
+            ]
+        ]);
     }
 
     /**

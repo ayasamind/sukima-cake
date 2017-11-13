@@ -6,7 +6,7 @@
 ?>
 <h4>学生登録</h4>
 <div class='ui form'>
-    <?= $this->Form->create($user) ?>
+    <?= $this->Form->create($user, ['type' => 'file']) ?>
     <div class='fields'>
         <div class='field'>
             <?= $this->Form->control('email', ['label' => 'メールアドレス', 'placeholder' => 'email']); ?>
@@ -26,15 +26,15 @@
         <div class='field'>
             <?= $this->Form->control('profiles.name', ['label' => '名前', 'placeholder' => 'name']); ?>
         </div>
-        <div class='field'>
-            <?=  $this->Form->control('profiles.sex', [
-                'type' => 'radio',
-                'options' => ['男性', '女性'],
-                'label' => '性別',
-                'placeholder' => 'sex',
-                'class' => 'ui radio checkbox',
-            ]); ?>
-        </div>
+        <label>性別</label>
+        <p>
+               <input name="sex" type="radio" id="sex-0" value='0' />
+               <label for="sex-0">男性</label>
+           </p>
+           <p>
+               <input name="sex" type="radio" id="sex-1" value='1' />
+               <label for="sex-1">女性</label>
+           </p>
     </div>
     <div class='fields'>
         <div class='field'>

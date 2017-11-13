@@ -26,8 +26,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css('semantic.min.css') ?>
-
+    <?= $this->Html->css('//cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css') ?>
+    <?= $this->Html->css('//fonts.googleapis.com/icon?family=Material+Icons'); ?>
+    <?= $this->Html->script('//code.jquery.com/jquery-3.1.1.min.js') ?>
+    <?= $this->Html->script('//code.jquery.com/ui/1.12.1/jquery-ui.js') ?>
+    <?= $this->Html->script('//cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js') ?>
+    <?= $this->Html->css('sukima.css') ?>
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
@@ -35,7 +39,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <body>
     <?= $this->Element('header'); ?>
     <?= $this->Flash->render() ?>
-    <div class='ui container'>
+    <div class='container'>
         <?= $this->fetch('content') ?>
     </div>
     <?= $this->Element('footer'); ?>
